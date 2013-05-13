@@ -59,6 +59,42 @@ return array(
                          ),
                      ),
                  ),
+                'company_language' => array(
+                     'type' => 'select',
+                     'label' => 'Company language',
+                     'enable'  => true,
+                     'editable'  => true,
+                     'required' => false,
+                     'empty_option' => 'Please choose the language of the company',
+                      'value_options' => array(
+                      		
+                 				'european' => array(
+                 						'label' => 'European languages',
+                 						'options' => array(
+                 								'0' => 'French',
+                 								'1' => 'Italian',
+                 						),
+                 				),
+                 				'asian' => array(
+                 						'label' => 'Asian languages',
+                 						'options' => array(
+                 								'2' => 'Japanese',
+                 								'3' => 'Chinese',
+                 						),
+                 				),
+                 		
+                 							),
+                        'validators' => array(
+                         array(
+                             'name' => 'Between',
+                             'options' => array(
+                                 'min' => 0,
+                                 'max' => 10,
+                             ),
+                         ),
+                     ),
+                 ),
+                 
                  'company_description' => array(
                      'type' => 'textarea',
                      'label' => 'Company description',
@@ -67,6 +103,7 @@ return array(
                      'class' => 'span7',
                      'rows' => '15',
                  ),
+                
         ),
     ),
 );
