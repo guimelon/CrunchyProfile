@@ -64,6 +64,10 @@ class Profile extends Form
                                 $currentField = new Element\Textarea("$name");
                                 $currentField->setAttribute('rows', $property['rows'] ? $property['rows'] : '10');
                                 break;
+                        case 'select':
+                        	$currentField = new Element\Select("$name");
+                        	$currentField->setValueOptions($property['value_options'] ? $property['value_options'] : array());
+                        	$currentField->setEmptyOption($property['empty_option'] ? $property['empty_option'] : array());
                         default:
                                 break;
                     }
